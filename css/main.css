@@ -273,6 +273,7 @@ ul{
   font-size: 15px;
   line-height: 25px;
   letter-spacing: 1px;
+  color: var(--title-color);
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -280,6 +281,7 @@ ul{
 .adv-list__link::after{
   position: absolute;
   top: 10px;
+  z-index: -1;
   left: -10px;
   right: 0;
   content: "";
@@ -287,6 +289,7 @@ ul{
   height: 10px;
   opacity: 0.25;
   border-radius: 28px;
+  transition: background-color 0.3s ease;
 }
 
 .adv-list__item:nth-child(1) .adv-list__link::after{
@@ -297,7 +300,7 @@ ul{
   background-color:  #FE7766;
 }
 
-.adv-list__link:hover .adv-list__link::after{
+.adv-list__info:hover .adv-list__link::after{
   opacity: 1;
 }
 
