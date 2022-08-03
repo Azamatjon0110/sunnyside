@@ -133,6 +133,7 @@ ul{
   background-color: var(--white-color);
   border: none;
   border-radius: 28px;
+  transition: 0.3s ease;
 }
 
 .site-header__btn{
@@ -284,9 +285,20 @@ ul{
   content: "";
   width: 137px;
   height: 10px;
-  background-color: #FAD400;
   opacity: 0.25;
   border-radius: 28px;
+}
+
+.adv-list__item:nth-child(1) .adv-list__link::after{
+  background-color: #FAD400;
+}
+
+.adv-list__item:nth-child(2) .adv-list__link::after{
+  background-color:  #FE7766;
+}
+
+.adv-list__link:hover .adv-list__link::after{
+  opacity: 1;
 }
 
 .adv-list__inf, .adv-list__mn{
@@ -346,7 +358,6 @@ ul{
 @media only screen and (min-width:600px){
 
   .navigation{
-    position: static;
     display: inline-block;
     display: flex;
     max-width: 467px;
@@ -419,6 +430,12 @@ ul{
 }
 
 @media only screen and (min-width:1024px){
+
+  .header-btn:hover{
+    color: var(--white-color);
+    background-color: #ffffff40;
+  }
+
   .hero{
     padding-top: 100px;
     padding-bottom: 536px;
