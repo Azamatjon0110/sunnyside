@@ -148,8 +148,10 @@ ul{
   position: absolute;
   display: block;
   top: 100%;
+  right: 0;
+  left: 0;
   width: 100%;
-  max-width: 290px;
+  max-width: 283px;
   margin: 0 auto;
   padding-top: 56px;
   padding-bottom: 30px;
@@ -158,6 +160,7 @@ ul{
 
 .site-header--open .navigation__list{
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .site-header--open .navigation__item{
@@ -170,6 +173,12 @@ ul{
   line-height: 25px;
   letter-spacing: -0.142857px;
   color: var(--text-color);
+}
+
+.site-header--open .navigation-btn{
+  width: 142px;
+  margin:0 auto;
+  text-align: center;
 }
 
 .site-header--open .header-btn{
@@ -199,8 +208,134 @@ ul{
   color: var(--white-color);
 }
 
+.wrapper{
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.adv-img{
+  display: block;
+  width: 100%;
+  max-width: 375px;
+  height: 312px;
+  margin: 0 auto;
+  background-image: url("../images/egg-mb.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.adv-imgr{
+  display: block;
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  height: 312px;
+  background-image: url("../images/rumka-mb.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.adv-list__info{
+  width: 100%;
+  max-width: 327px;
+  margin: 0 auto;
+  padding:60px 24px;
+  text-align: center;
+}
+
+.adv-list__title{
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: -0.228571px;
+  color: var(--title-color);
+}
+
+.adv-list__text{
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.128571px;
+  color: var(--text-color);
+}
+
+.adv-list__link{
+  position: relative;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.adv-list__link::after{
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  right: 0;
+  content: "";
+  width: 137px;
+  height: 10px;
+  background-color: #FAD400;
+  opacity: 0.25;
+  border-radius: 28px;
+}
+
+.adv-list__inf, .adv-list__mn{
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 24px;
+  padding-top: 370px;
+  padding-bottom: 50px;
+  color: var(--title-color);
+  text-align: center;
+  background-repeat: no-repeat;
+}
+
+.adv-list__inf{
+  background-image: url("../images/cherry-mb.png");
+}
+
+.adv-list__mn{
+  background-image: url("../images/mandarin-mb.png");
+}
+
+.adv-list__chtitle{
+  width: 100%;
+  max-width: 327px;
+  margin: 0;
+  margin-bottom: 26px;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 35px;
+  letter-spacing: -0.2px;
+}
+
+.adv-list__chtext{
+  width: 100%;
+  max-width: 327px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: -0.114286px;
+}
 
 @media only screen and (min-width:375px){
+
+  .site-header--open .navigation{
+    max-width: 350px;
+  }
+
   .hero{
     background-image: url("../images/hero-bg.png");
     padding-bottom: 350px;
@@ -211,6 +346,7 @@ ul{
 @media only screen and (min-width:600px){
 
   .navigation{
+    position: static;
     display: inline-block;
     display: flex;
     max-width: 467px;
@@ -220,8 +356,67 @@ ul{
     display: none;
   }
 
+  .site-header--open .navigation{
+    position: static;
+    display: none;
+  }
+
 }
 
+@media only screen and (min-width:768px){
+  .adv-list__item{
+    display: flex;
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .adv-list__item:first-child{
+    flex-direction: row-reverse;
+  }
+
+  .adv-list__info{
+    max-width: 378px;
+    padding: 20px 24px;
+    text-align: left;
+  }
+
+  .adv-list__title{
+    font-size: 29px;
+  }
+
+  .adv-list__text{
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .adv-img{
+    margin: 0;
+    max-width: 388px;
+    background-image: url("../images/egg.png");
+    background-size: cover;
+  }
+
+  .adv-imgr{
+    margin: 0;
+    max-width: 388px;
+    background-image: url("../images/rumka.png");
+    background-size: cover;
+  }
+
+  .adv-list__inf, .adv-list__mn{
+    max-width: 388px;
+    margin: 0;
+  }
+
+  .adv-list__inf{
+    background-image: url("../images/cherry.png");
+    background-position:top center;
+  }
+  .adv-list__mn{
+    background-image: url("../images/mandarin.png");
+    background-position:top center;
+  }
+}
 
 @media only screen and (min-width:1024px){
   .hero{
@@ -233,5 +428,78 @@ ul{
   .hero__title{
     font-size: 56px;
     line-height: 69px;
+  }
+
+  .adv-list__item{
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .adv-list__item:first-child{
+    flex-direction: row-reverse;
+  }
+
+  .adv-list__info{
+    max-width: 50%;
+    padding: 95px 50px;
+  }
+
+  .adv-list__wrappper{
+    max-width: 445px;
+    margin: 0 auto;
+  }
+
+  .adv-list__title{
+    font-size: 49px;
+  }
+
+  .adv-list__text{
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .adv-img{
+    margin: 0;
+    max-width:50%;
+    height: 500px;
+    background-image: url("../images/egg.png");
+    background-size: cover;
+  }
+
+  .adv-imgr{
+    margin: 0;
+    max-width:50%;
+    height: 500px;
+    background-image: url("../images/rumka.png");
+    background-size: cover;
+  }
+
+  .adv-list__inf, .adv-list__mn{
+    max-width: 50%;
+    height: 500px;
+    margin: 0;
+  }
+
+  .adv-list__inf{
+    background-image: url("../images/cherry.png");
+    background-position:top center;
+  }
+  .adv-list__mn{
+    background-image: url("../images/mandarin.png");
+    background-position:top center;
+  }
+  .adv-list__chtitle{
+    margin: 0 auto;
+  }
+  .adv-list__chtext{
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width:1100px){
+  .adv-list__info{
+    padding: 110px 72px;
   }
 }
